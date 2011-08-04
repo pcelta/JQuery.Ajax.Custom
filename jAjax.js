@@ -16,10 +16,10 @@ function CustomAjax(){
 
 
 	/*ATRIBUTOS PRIVADOS*/
-	var method 	= "POST";
-	var action		= "";
-	var data		= "param=false";
-	var async		= false;
+	var method 	= "POST",
+		action	= "",
+		data	= "param=false",
+		async	= false;
 
 
 	/*METODO PRIVADO QUE EFETUA A REQUISIÇÃO AJAX*/
@@ -32,9 +32,9 @@ function CustomAjax(){
 			async:	async		
 		}).responseText;
 		return retorno;
-	}
+	};
 
-	/*METODOS PUBLICOS QUE SERÃO CHAMADOS PELO OBJETOS*/
+	/* METODOS PUBLICOS */
 	
 	
 	/***	@param formulario
@@ -61,7 +61,7 @@ function CustomAjax(){
 		setAction(newAction);
 		setData(newData);
 		return doAjax();
-	}
+	};
 	
 	
 	/***	@param url
@@ -72,7 +72,7 @@ function CustomAjax(){
 	this.single = function(url){
 		setAction(newAction);		
 		return doAjax();
-	}
+	};
 
 	
 	/***	@param url, data, method
@@ -87,7 +87,7 @@ function CustomAjax(){
 		setMethod(newMethod);
 		setData(newData);
 		return doAjax();		
-	}
+	};
 
 
 
@@ -98,21 +98,21 @@ function CustomAjax(){
 		if(newData != "" || newData != null){
 			method = newMethod;
 		}		
-	}
+	};
 	getMethod = function(){
 		return method;	
-	}
+	};
 	setAction = function(newAction){
 		action = newAction;
-	}
+	};
 	getAction = function(){
 		return action;
-	}
+	};
 	setData = function(newData){
 		data = newData;
-	}
+	};
 	getData = function(){
 		return data;
-	}
+	};
 
 }
