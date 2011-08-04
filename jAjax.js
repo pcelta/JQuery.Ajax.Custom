@@ -58,8 +58,8 @@ function CustomAjax(){
 	 * 
 	 */
 	this.simple = function(url, data){
-		setAction(newAction);
-		setData(newData);
+		setAction(url);
+		setData(data);
 		return doAjax();
 	};
 	
@@ -70,7 +70,7 @@ function CustomAjax(){
 	 * 		Método para uma requisição simples sem envio de dados
 	 */
 	this.single = function(url){
-		setAction(newAction);		
+		setAction(url);		
 		return doAjax();
 	};
 
@@ -82,10 +82,10 @@ function CustomAjax(){
 	 *		-data 	= dados serializados que serão enviados pela requisição
 	 *		-method = metodo de envio GET/POST
 	 */
-	this.advanced = function(newAction, newData, newMethod){
-		setAction(newAction);
-		setMethod(newMethod);
-		setData(newData);
+	this.advanced = function(url, data, method){
+		setAction(url);
+		setMethod(method);
+		setData(data);
 		return doAjax();		
 	};
 
